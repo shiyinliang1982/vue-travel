@@ -3,6 +3,7 @@
     <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
+    <home-recommand :list="recommendList"></home-recommand>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
   import HomeHeader from './HomeHeader'
   import HomeSwiper from './HomeSwiper'
   import HomeIcons from './HomeIcons'
+  import HomeRecommand from './HomeRecommand'
   const axios = require('axios');
 
   export default {
@@ -25,7 +27,8 @@
     components: {
       HomeHeader,
       HomeSwiper,
-      HomeIcons
+      HomeIcons,
+      HomeRecommand
     },
     mounted(){
       axios.get('../../static/mock/index.json').then((response)=> {
