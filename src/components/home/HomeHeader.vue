@@ -6,7 +6,7 @@
         <span class="search iconfont icon-sousuo"></span>
         <input type="text" class="input-content" placeholder="请输入城市/景点/主题">
       </div>
-      <div class="city-wrapper">
+      <div class="city-wrapper" @click="toCity">
         <span class="down-word">深圳</span>
         <span class="down iconfont icon-xiala"></span>
       </div>
@@ -15,9 +15,14 @@
 </template>
 
 <script>
-    export default {
-        name: "HomeHeader"
+  export default {
+    name: "HomeHeader",
+    methods: {
+      toCity() {
+        this.$router.push('/city')
+      }
     }
+  }
 </script>
 
 <style scoped lang="stylus">
